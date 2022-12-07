@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-//package project3;
+//package project3_;
 
 import java.io.File;
 import java.util.Comparator;
@@ -68,6 +68,7 @@ public class Project3{
     }
 
     public static void RR(List<Job> q) {
+        System.out.println("Round Robin");
         //Where you store A-E inside of the q1
         Queue<Job> q1 = new LinkedList<>();
 
@@ -111,7 +112,7 @@ public class Project3{
                 System.out.println("X");
                 //decrementing the duration time from the storage once x is placed
                 holder.dur_time--;
-
+                time++;
                 
 
                 it = q_copy.iterator();
@@ -133,13 +134,16 @@ public class Project3{
             }
             else{
                 System.out.println();
+                time++;
             }
-            time++;
+           
         }
 
     }
 
     public static void SRT(List<Job> q) {
+        System.out.println("\n------------------------------");
+        System.out.println("Shortest Remaining Time");
         int time = 0;
 
         Queue<Job> q2 = new PriorityQueue<>(new Comparator<>() {
@@ -208,7 +212,8 @@ public class Project3{
     }
 
     public static void FB(List<Job> q) {
-
+        System.out.println("\n------------------------------");
+        System.out.println("FeedBack");
         //Where you store A-E inside of the q1
         List<Job> q3 = new LinkedList<>();
 
@@ -313,3 +318,4 @@ class Job {
     }
 
 }
+
